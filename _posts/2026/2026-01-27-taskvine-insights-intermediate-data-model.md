@@ -123,7 +123,7 @@ while not m.empty():
         pass
 ```
 
-## Using temp outputs in DaskVine graph executor
+### 3) Using temp outputs in DaskVine graph executor
 
 DaskVine already exposes this idea with a simple switch: `worker_transfers`.
 
