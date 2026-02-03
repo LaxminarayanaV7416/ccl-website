@@ -7,7 +7,7 @@ image: /assets/blog/2026/floability-winter-research-retreat-2026/group-photo.png
 categories:
   - news
 tags:
-  - news
+  - news, floability, taskvine
 description: Snow kept falling as we hosted our Floability winter retreat at Notre Dame, catching up with friends from UIUC, DePaul, and Missouri and hashing out some tough workflow problems together.
 toc: false
 related_posts: false
