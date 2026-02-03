@@ -13,7 +13,6 @@ toc: false
 related_posts: false
 ---
 
-
 In January, we held our annual research retreat for the Floability project on a snowy January day at Notre Dame. Thanks to our colleagues from University of Illinois, DePaul University, and University of Missouri who made the trek out!
 
 The Floability Project is an NSF funded research project to enable the rapid and portable deployment of notebooks expressing complex scientific workflows across a wide range of cyberinfrastructure. The key technical challenge is that workflows are incomplete: the code by itself cannot be moved between facilities without accurately capturing the software dependencies, required datasets, and capabilities of the underlying cluster hardware.  Floability builds on a variety of open source technologies, including Jupyter to provide interactive notebook environments, Sciunit to discover software and data dependencies, TaskVine to express and execute workflows, and Conda Forge to provision and deploy software environments.
