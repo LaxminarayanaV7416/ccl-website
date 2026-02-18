@@ -13,6 +13,12 @@ toc: false
 related_posts: false
 ---
 
+<div class="row justify-content-sm-center">
+<div class="col-sm-12">
+{% include figure.liquid path="/assets/blog/2026/pledge-development-updates/pledge-figure.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+</div>
+
 Many HPC applications are composed of shell scripts which invoke one or more executables from a scientific software package. These applications can be distributed by sending the scripts out through a batch submission system, or they may invoke the batch system within the script along with configurations to determine scale and resource allocations.
 
 There are a number of reasons one may wish to convert the application to use a higher-level workflow system which constructs a proper DAG. There could be missed concurrency opportunities, data movement bottlenecks, or the desire for portability to run on another system.
