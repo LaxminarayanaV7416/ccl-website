@@ -146,8 +146,6 @@ collections:
     output: true
   software:
     output: true
-  alt:
-    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
