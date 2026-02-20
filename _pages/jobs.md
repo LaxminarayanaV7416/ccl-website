@@ -6,7 +6,7 @@ nav: false
 nav_order: 6
 ---
 
-Join the [CCL team](people) and work on challenging problems in the realm of [parallel and distributed systems](papers). We work closely with collaborators in [physics, molecular dynamics, machine learning, and other fields](highlights) to build systems that scale to tens of thousands of cores on national infrastructure such as clusters, clouds, and grids. We publish [open source software](softwares) that is used around the world.
+Join the [CCL team](people) and work on challenging problems in the realm of [parallel and distributed systems](papers). We work closely with collaborators in [physics, molecular dynamics, machine learning, and other fields](highlights) to build systems that scale to tens of thousands of cores on national infrastructure such as clusters, clouds, and grids. We publish [open source software](software) that is used around the world.
 
 - [Postdoctoral Scholars (1)](#postdoctoral-scholars-1)
 - [Ph.D. Students (2)](#phd-students-2)

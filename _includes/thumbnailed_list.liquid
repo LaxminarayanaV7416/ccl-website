@@ -10,7 +10,7 @@
 
 
 
-{%- assign source_items = include.items | default: site.softwares -%}
+{%- assign source_items = include.items | default: site.software -%}
 {%- assign _featured_param = include.featured_only | default: 'false' | downcase -%}
 {%- assign _prefer_long_param = include.prefer_long_description | default: 'false' | downcase -%}
 {%- assign _show_links_param = include.include_links | default: 'false' | downcase -%}

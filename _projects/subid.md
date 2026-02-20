@@ -26,7 +26,7 @@ One way to improve this situation is to introduce **sub-identities**. In this mo
 - [Sub-Identities: A Hierarchical Identity Model for Practical Containment](/assets/pdf/snowberger-ms-thesis.pdf), Philip Snowberger, MS CSE Thesis, University of Notre Dame, April 2007.
 - [Sub-Identity: Security for Mere Mortals](http://www.nd.edu/~dthain/papers/subid-usesec06.pdf), Phil Snowberger and Douglas Thain, presented at the USENIX Security Symposium, 3 August 2006.
 - [Sub-Identities: Towards Operating System Support for Distributed System Security](http://www.nd.edu/~dthain/papers/subid-tr.pdf),Phil Snowberger and Douglas Thain, Technical Report 2005-18, University of Notre Dame, Department of Computer Science and Engineering, October 2005.
-- [SubID Software Package](/softwares/subid)
+- [SubID Software Package](/software/subid)
 
 ### Hierarchical Space Allocation
 

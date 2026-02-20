@@ -144,7 +144,7 @@ collections:
     output: true
   projects:
     output: true
-  softwares:
+  software:
     output: true
   alt:
     output: true

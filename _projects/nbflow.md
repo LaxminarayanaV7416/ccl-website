@@ -15,7 +15,7 @@ links:
   - name: Project Website
     url: https://floability.github.io
   - name: Related Software
-    url: /softwares/floability
+    url: /software/floability
 ---
 
 NBFlow is our newest CSSI project that brings together interactive notebook technologies (Jupyter), with reproducibility tools (SciUnit), and distributed workflows (TaskVine). The combined result will be a new system (NBFlow) that makes it easy to execute large scale workflows on thousands of cluster nodes, through the familiar interface of the executable notebook. While easily stated, this presents a number of challenges to reconcile the high throughput but unpredictable nature of clusters with the immediate feedback expected by notebooks. We will develop a number of new techniques to convert notebooks into workflows, execute them reliably on the cluster, and then return them back again to the user. This project is a collaboration with Kevin Lannon (U Notre Dame), Tanu Malik (DePaul U), and Shaowen Wang (U Illinois).
