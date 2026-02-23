@@ -21,7 +21,7 @@ links:
     url: https://cctools.readthedocs.io/en/stable/taskvine/
     background-image: assets/img/software/taskvine/docs.png
   - name: Overview Slides
-    url: https://cctools.readthedocs.io/en/stable/taskvine/overview.html
+    url: https://docs.google.com/presentation/d/1sKIfrXu0LqeGH9XLBqBVMqBZYNuJ4Xs7kENIRiIOEjg/edit?usp=sharing
     background-image: assets/img/software/taskvine/overview-slides.png
   - name: Python API
     url: https://cctools.readthedocs.io/en/stable/api/html/namespacendcctools_1_1taskvine.html
