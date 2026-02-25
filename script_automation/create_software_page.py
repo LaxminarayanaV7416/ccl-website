@@ -388,7 +388,7 @@ Examples:
     # Get absolute paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
     img_dir = os.path.join(script_dir, '..', 'assets', 'img', 'software')
-    software_dir = os.path.join(script_dir, '..', '_softwares')
+    software_dir = os.path.join(script_dir, '..', '_software')
     
     if not os.path.isabs(args.bib_file):
         bib_file = os.path.join(script_dir, args.bib_file)

@@ -24,6 +24,6 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-We design [software](softwares) that enables our [collaborators](highlights) to easily harness large scale distributed systems such as clusters, clouds, and grids. We perform fundamental [computer science research](projects) that enables new discoveries through computing in fields such as physics, chemistry, bioinformatics, biometrics, and data mining.
+We design [software](software) that enables our [collaborators](highlights) to easily harness large scale distributed systems such as clusters, clouds, and grids. We perform fundamental [computer science research](projects) that enables new discoveries through computing in fields such as physics, chemistry, bioinformatics, biometrics, and data mining.
 
-All of our softwares are open source and available on [GitHub](https://github.com/cooperative-computing-lab). We are always eager to welcome new collaborators—whether you want to explore our software, contribute to development, or receive support. Explore our tools to see how they can power your distributed computing needs, and visit the [getting help](help) section if you need assistance.
+All of our software is open source and available on [GitHub](https://github.com/cooperative-computing-lab). We are always eager to welcome new collaborators—whether you want to explore our software, contribute to development, or receive support. Explore our tools to see how they can power your distributed computing needs, and visit the [getting help](help) section if you need assistance.

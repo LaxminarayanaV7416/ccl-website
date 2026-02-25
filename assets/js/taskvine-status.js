@@ -423,10 +423,10 @@ function create_task_status_bar(manager, column) {
     .data(stackedData)
     .enter()
     .append("g")
-    .attr("class","progress-group")
-    ;
-    
-    groups.append("rect")
+    .attr("class", "progress-group");
+
+  groups
+    .append("rect")
     .attr("x", function (d) {
       return x(d.x);
     })
@@ -461,20 +461,21 @@ function create_task_status_bar(manager, column) {
     })
     .on("mouseleave", function () {
       tooltip.style("opacity", 0);
+    });
+
+  groups
+    .append("text")
+    .text(function (d) {
+      return parseInt(d.true_val, 10);
     })
-    ;
-
-    groups.append("text")
-	.text(function(d) { return parseInt(d.true_val,10);})
-	.attr("x",function(d) { return x(d.x)+10; } )
-	.attr("y",height-5)
-	.attr("text-anchor","left")
-	.attr("fill","black")
-	.attr("font-family","sans-serif")
-	.attr("font-size","12px")
-    ;
-
-
+    .attr("x", function (d) {
+      return x(d.x) + 10;
+    })
+    .attr("y", height - 5)
+    .attr("text-anchor", "left")
+    .attr("fill", "black")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "12px");
 }
 
 function create_manager_time_pie(manager, column) {

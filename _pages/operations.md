@@ -19,4 +19,7 @@ children:
   - title: divider
   - title: TaskVine Status
     permalink: /software/taskvine/status/
+  - title: divider
+  - title: Work Queue Status
+    permalink: /software/workqueue/status/
 ---
