@@ -118,8 +118,6 @@ layout: default
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem; 
     margin-top: 1rem;
-    max-width: 100%;
-    justify-content: center;
   }
   
   @media (min-width: 992px) {
@@ -150,7 +148,7 @@ layout: default
     align-items: center;
     justify-content: center;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.3;
@@ -201,12 +199,9 @@ layout: default
     background-size: 125%;
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .software-page .software-badges {
       grid-template-columns: 1fr;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
       gap: 1rem;
     }
     

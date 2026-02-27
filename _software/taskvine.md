@@ -28,7 +28,7 @@ links:
     background-image: assets/img/software/taskvine/c-api.png
   - name: Status Display (CCL)
     url: https://ccl.cse.nd.edu/software/taskvine/status/
-    background-image: assets/img/software/taskvine/status-display.png
+    background-image: assets/img/software/taskvine/taskvine-status.png
   - name: Logs and Data
     url: https://github.com/cooperative-computing-lab/taskvine-example-logs
     background-image: assets/img/software/taskvine/logs-and-data.png
@@ -41,7 +41,7 @@ slides:
     img: assets/img/software/taskvine/network-config-slides.png
     url: https://docs.google.com/presentation/d/1cxiNlkA2UfEmiLW_OeE-r4RY4HO9IxjH1fnxiaIr3AU/edit?usp=sharing
   
-  - title: Evolving Programming Models
+  - title: Evolving Programming Models with TaskVine
     img: assets/img/software/taskvine/programming-models-slides.png
     url: https://docs.google.com/presentation/d/1jCY09OX4DYzlb3sUnf8ns3pdHP2yjdpKuPCMnwX_E6I/edit?usp=sharing
   
