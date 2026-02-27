@@ -64,6 +64,24 @@ layout: default
       </div>
     {% endif %}
 
+    {% if page.slides and page.slides.size > 0 %}
+      <div class="mt-5">
+        <h2>Reference Slides</h2>
+        <div class="slides-grid mt-4">
+          {% for slide in page.slides %}
+            <div class="slide-card">
+              <a href="{{ slide.url }}" target="_blank" rel="noopener noreferrer">
+                <div class="slide-thumbnail">
+                  <img src="{{ slide.img | relative_url }}" alt="{{ slide.title }}" class="img-fluid">
+                </div>
+                <div class="slide-title">{{ slide.title }}</div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
     {% if page.publication_keywords %}
       <div class="mt-5">
         {% assign taglist = page.publication_keywords | join: ',' %}
@@ -213,5 +231,64 @@ layout: default
     font-style: italic;
     color: var(--global-text-color-light, #666);
     margin-bottom: 0;
+  }
+  
+  .slides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .slide-card {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+  }
+  
+  .slide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .slide-card a {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+  }
+  
+  .slide-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slide-title {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--global-text-color, #333);
+    text-align: center;
+    border-top: 2px solid var(--global-theme-color, #007bff);
+  }
+  
+  @media (max-width: 768px) {
+    .slides-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
   }
 </style>
