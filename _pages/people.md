@@ -71,6 +71,7 @@ team_photos:
 - LTC Dr. Jeffrey Hemmes, USAF, Ph.D. 2009 — Faculty at the Air Force Institute of Technology
 
 ## Past Undergraduates
+
 - Ian Setia - Implemented a persistent cache for the Coffea preprocessor to eliminate redundant recomputation.
 - Eamon Tracey - Developed techniques for extracting LLM-ready inputs from uncommon code bases.
 - Eliot Kim - Characterizing performance as part of continuous integration.
