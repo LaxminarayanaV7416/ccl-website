@@ -39,12 +39,6 @@ people:
     image: assets/img/people/lvadnala.jpg
     website: https://laxminarayanav7416.github.io/
     designation: Ph.D. Student
-  - name: Abby Kapocious
-    image: assets/img/people/unknown.jpg
-    designation: M.S. Student
-  - name: Ian Setia
-    image: assets/img/people/isetia.jpg
-    designation: Undergraduate
 team_photos:
   - name: assets/img/team/ccl-fall-2023.jpg
     caption: CCL Team, Fall 2023
@@ -77,7 +71,7 @@ team_photos:
 - LTC Dr. Jeffrey Hemmes, USAF, Ph.D. 2009 — Faculty at the Air Force Institute of Technology
 
 ## Past Undergraduates
-
+- Ian Setia - Implemented a persistent cache for the Coffea preprocessor to eliminate redundant recomputation.
 - Eamon Tracey - Developed techniques for extracting LLM-ready inputs from uncommon code bases.
 - Eliot Kim - Characterizing performance as part of continuous integration.
 - Kevin Xue - Developed computational abstractions based on futures.
