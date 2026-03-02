@@ -32,7 +32,7 @@ links:
   - name: Logs and Data
     url: https://github.com/cooperative-computing-lab/taskvine-example-logs
     background-image: assets/img/software/taskvine/logs-and-data.png
-  - name: GitHub Discussions
+  - name: Support
     url: https://github.com/cooperative-computing-lab/cctools/discussions
     background-image: assets/img/software/taskvine/github-discussions.png
 slides:
