@@ -1,0 +1,34 @@
+---
+layout: post
+title: "HEP Development at the CCL"
+date: 2026-03-03T12:00:00-05:00
+author: Cooperative Computing Lab
+image: /assets/blog/2026/hep-development-at-the-ccl/application-stack.png
+categories:
+  - technical-articles
+tags:
+  - hep
+  - taskvine
+  - coffea
+  - daskvine
+  - vine-reduce
+description: CCL has long collaborated with NDCMS on high-energy physics workflows. A look at how we evolved from Coffea 0.7 executors through DaskVine and VineReduce to power production apps like RsTriPhoton and TopEFT.
+toc: false
+related_posts: false
+---
+
+<div class="row justify-content-sm-center">
+<div class="col-sm-12">
+{% include figure.liquid path="/assets/blog/2026/hep-development-at-the-ccl/application-stack.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+</div>
+
+The Cooperative Computing Lab has been longtime collaborators with the NDCMS project here at Notre Dame. Over the years, we have seen many developments in the space of high energy physics analyses and now support a variety of methods of scaling these applications to a large number of compute nodes at a variety of compute sites. HEP analyses have utilized Coffea, a Python toolkit which allows users to easily manipulate columnar data and scale from local execution to large clusters. 
+
+Early versions of Coffea (0.7) incorporated dedicated “executors” which utilized a variety of workflow management systems. Initial work into the Coffea Work Queue executor allowed users to utilize Work Queue to distribute their applications onto a variety of execution environments. Later improvements and restructuring to workflow scheduling led to the development of TaskVine. Like Work Queue, a TaskVine executor was developed for analyses that utilized Coffea (0.7). 
+
+With the release of Coffea (2024), Dask was utilized as a layer underneath to create a task graph and distribute work to compute resources. To facilitate compatibility, DaskVine was created, which is a compatible distributed executor that utilizes TaskVine and serves as an alternative to Dask’s native dask.distributed scheduler. Here, Dask would generate the task graph but DaskVine would manage the synthesis and distribution of individual tasks. 
+
+Even further development with Coffea (2025) returned to the individual executor model seen in Coffea (0.7) while maintaining support with Dask as an option for distributing work. With this, an updated version of the TaskVine executor was created. Limitations in executing very large task graphs led to the development of VineReduce, which aimed to solve this issue by taking advantage of the map-reduce-like nature of these applications and some commonality in analysis applications.
+
+At this moment, a variety of applications currently use these application stacks to distribute their work on to compute clusters. This includes, RsTriPhoton, DV5, ttbarEFT, and TopEFT.
