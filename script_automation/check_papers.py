@@ -270,6 +270,9 @@ Examples:
     generated_count = 0
     downloaded_count = 0
     updated_entries = []
+    modified_keys = set()  # Track which entries were modified
+    downloads = []  # Track downloaded entries
+    generated = []  # Track generated thumbnails
 
     for idx, entry in enumerate(entries, 1):
         entry_issues = []
@@ -311,42 +314,53 @@ Examples:
         # Optional: Generate missing files
         if args.generate_missing and entry_issues:
             try:
-                # Case 1: PDF file missing but field exists - skip (can't regenerate)
-                if has_pdf_field and not pdf_exists:
-                    pass  # Skip
-
-                # Case 2: PDF exists but preview missing - generate thumbnail
-                if pdf_exists and not preview_exists:
-                    generate_thumbnail(pdf_path, preview_path)
-                    generated_count += 1
-                    updated_entries.append((entry.key, "generated thumbnail"))
-
-                # Case 3: No PDF field but URL exists - download and generate
-                if not has_pdf_field and has_url_field:
+                # Case 1: PDF file missing but field exists - try to download if URL available
+                if has_pdf_field and not pdf_exists and has_url_field:
                     url = entry.get_field("url")
                     eprint = entry.get_field("eprint")
                     pdf_url = resolve_pdf_url(url, eprint)
                     if pdf_url:
                         download_pdf(pdf_url, pdf_path)
                         downloaded_count += 1
+                        downloads.append(entry.key)
+                        if not preview_exists:
+                            generate_thumbnail(pdf_path, preview_path)
+                            generated_count += 1
+                            generated.append(entry.key)
+
+                # Case 2: PDF exists but preview missing - generate thumbnail
+                elif pdf_exists and not preview_exists:
+                    generate_thumbnail(pdf_path, preview_path)
+                    generated_count += 1
+                    generated.append(entry.key)
+
+                # Case 3: No PDF field but URL exists - download and generate
+                elif not has_pdf_field and has_url_field:
+                    url = entry.get_field("url")
+                    eprint = entry.get_field("eprint")
+                    pdf_url = resolve_pdf_url(url, eprint)
+                    if pdf_url:
+                        download_pdf(pdf_url, pdf_path)
+                        downloaded_count += 1
+                        downloads.append(entry.key)
                         generate_thumbnail(pdf_path, preview_path)
                         generated_count += 1
+                        generated.append(entry.key)
                         # Update entry
-                        entry = entry.render_with_updates(
+                        updated_entry = entry.render_with_updates(
                             pdf_rel=f"{entry.key}.pdf",
                             preview_rel=f"{entry.key}.png"
                         )
-                        updated_entries.append((entry.key, "downloaded and generated"))
+                        updated_entries.append(updated_entry)
+                        modified_keys.add(entry.key)
+                        continue  # Skip adding the raw entry below
 
             except Exception as e:
                 if not args.verbose:
                     print(f"[{idx}/{len(entries)}] {entry.key}: failed to generate - {e}")
 
         # Always append to updated entries (even if not modified)
-        if args.generate_missing:
-            if entry not in updated_entries:
-                updated_entries.append(entry.raw if isinstance(entry, BibEntry) else entry)
-        else:
+        if entry.key not in modified_keys:
             updated_entries.append(entry.raw)
 
     # Report missing fields
@@ -370,7 +384,13 @@ Examples:
         print("GENERATION SUMMARY")
         print("=" * 80)
         print(f"Thumbnails generated: {generated_count}")
+        if generated:
+            for key in generated:
+                print(f"  - {key}")
         print(f"PDFs downloaded: {downloaded_count}")
+        if downloads:
+            for key in downloads:
+                print(f"  - {key}")
         
         if downloaded_count > 0 or generated_count > 0:
             write_bib(bib_path, header, updated_entries)
