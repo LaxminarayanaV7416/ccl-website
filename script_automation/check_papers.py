@@ -242,8 +242,8 @@ Examples:
         """
     )
     parser.add_argument("--bib", type=Path, default=Path("_bibliography/papers.bib"))
-    parser.add_argument("--pdf-dir", type=Path, default=Path("assets/pdf"))
-    parser.add_argument("--preview-dir", type=Path, default=Path("assets/img/publication_preview"))
+    parser.add_argument("--pdf-dir", type=Path, default=Path("assets/paper/pdf"))
+    parser.add_argument("--preview-dir", type=Path, default=Path("assets/paper/preview"))
     parser.add_argument("--generate-missing", action="store_true",
                        help="Generate missing PDFs and thumbnails")
     parser.add_argument("--verbose", "-v", action="store_true",
