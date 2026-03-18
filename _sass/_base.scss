@@ -1787,3 +1787,9 @@ figure.cover {
     }
   }
 }
+
+.post article h1 code,
+.post article h2 code,
+.post article h3 code {
+  text-transform: none;
+}
