@@ -42,6 +42,7 @@ preview = {my-paper-key-2025.png},
 ```
 
 Other good to have fields:
+
 - `doi` - Digital Object Identifier (auto-generates link as https://doi.org/{doi})
 - `keywords` - Space or comma-separated keywords to categorize papers (e.g., `taskvine`, `workqueue`, `makeflow`, `hep`, `llm`, `gpu`). These keywords can be used to automatically list papers on project pages.
 
@@ -49,10 +50,10 @@ Other good to have fields:
    - PDF: `assets/paper/pdf/my-paper-key-2025.pdf`
    - Preview: `assets/paper/preview/my-paper-key-2025.png`
 
-
 **Optional: Auto-generate previews**
 
 If you have the PDF but no preview thumbnail, you can use the script to generate it:
+
 ```bash
 python script_automation/check_papers.py --generate-missing
 ```
