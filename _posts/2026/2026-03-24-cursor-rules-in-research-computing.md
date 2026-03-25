@@ -7,11 +7,11 @@ image: /assets/blog/2026/cursor-rules-in-research-computing/readme-vs-agents-md.
 categories:
   - technical-articles
 tags:
-  - cursor
-  - ai
-  - research-computing
-  - agents
-description: One of our lab researchers shares practical experience with Cursor rules and AGENTS.md-style project context: how they help AI assistants stay aligned with style, layout, and how we run tests in research computing workflows.
+  - ai-tools
+description: >-
+  One of our lab researchers shares practical experience with Cursor rules and
+  AGENTS.md-style project context: how they help AI assistants stay aligned with
+  style, layout, and how we run tests in research computing workflows.
 toc: false
 related_posts: false
 ---
