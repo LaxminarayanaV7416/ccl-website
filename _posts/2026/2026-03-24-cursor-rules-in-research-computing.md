@@ -41,30 +41,20 @@ Finally, remember that Cursor treats these as strong guidance, not a rigid spec;
 
 Community templates for stacks and project types: [cursor.directory](https://cursor.directory/).
 
-For example, a project-level file might include sections like the following. The tree and shell snippets are shown in separate fences so they render cleanly (nested fences would break the page).
-
-```markdown
-## Agent Role & Expertise
-
-You are an expert in:
-
-- **Software Architecture & Engineering**: Design patterns, modularity, scalability
-- **High Performance Computing (HPC)**: Parallel processing, resource optimization
-- **High Throughput Computing (HTC)**: Batch processing, job scheduling
-
-## Project Structure
-```
+For example, a project-level file might include sections like the following:
 
 ```text
+## Agent Role & Expertise
+You are an expert in:
+- Software Architecture & Engineering: Design patterns, modularity, scalability
+- High Performance Computing (HPC): Parallel processing, resource optimization
+- High Throughput Computing (HTC): Batch processing, job scheduling
+
+## Project Structure
 ├── src/           # Python source code
 ├── tests/         # Unit tests (pytest)
-```
 
-```markdown
 ## Development Commands
-```
-
-```bash
 # Code quality
 ruff check          # Type-check and lint
 ruff format         # Auto-fix formatting
