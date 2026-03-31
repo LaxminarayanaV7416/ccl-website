@@ -23,7 +23,7 @@ A simple example of this is the matter of identifying users. An ordinary user wo
 
 One way to improve this situation is to introduce **sub-identities**. In this model, any user can create a sub-user which is named relative to the user that created it. For example, the root user would still be `root`, but I would become `root:joe`. If I were to create a temporary account for a visiting user, it would be `root:joe:afriend`. In this way, each user can dynamically create protection zones that allow for visiting users as well as untrusted programs.
 
-- [Sub-Identities: A Hierarchical Identity Model for Practical Containment](/assets/pdf/snowberger-ms-thesis.pdf), Philip Snowberger, MS CSE Thesis, University of Notre Dame, April 2007.
+- [Sub-Identities: A Hierarchical Identity Model for Practical Containment](/assets/paper/pdf/snowberger-ms-thesis.pdf), Philip Snowberger, MS CSE Thesis, University of Notre Dame, April 2007.
 - [Sub-Identity: Security for Mere Mortals](http://www.nd.edu/~dthain/papers/subid-usesec06.pdf), Phil Snowberger and Douglas Thain, presented at the USENIX Security Symposium, 3 August 2006.
 - [Sub-Identities: Towards Operating System Support for Distributed System Security](http://www.nd.edu/~dthain/papers/subid-tr.pdf),Phil Snowberger and Douglas Thain, Technical Report 2005-18, University of Notre Dame, Department of Computer Science and Engineering, October 2005.
 - [SubID Software Package](/software/subid)
@@ -50,5 +50,5 @@ While there exist meny mechanisms for managing security on a _single host_ (such
 
 To remedy this, we introduce the **Lockdown** system. Lockdown consists of a centrally managed database governing network policy, managed by the cognizant network security officer. The database controls what **users** and **applications** are allowed to talk to each other over the network. Fragments of the database are pushed out to end hosts, which are equipped with a reference monitor that allows or denies connections according to the policy. In this way, a more expressive policy can be stated and enforced in conventional systems.
 
-- [Lockdown: Distributed Policy Analysis and Enforcement within the Enterprise Network](/assets/pdf/lockdown-security07.pdf),  
+- [Lockdown: Distributed Policy Analysis and Enforcement within the Enterprise Network](/assets/paper/pdf/lockdown-security07.pdf),
   Andrew Blaich, Qi Liao, Greg Allan, Aaron Striegel, and Douglas Thain, Poster presented at USENIX Security Conference 2007.

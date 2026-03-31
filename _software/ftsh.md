@@ -27,7 +27,7 @@ The Fault-Tolerant Shell (ftsh) is a small language for system integration that 
     end
 ```
 
-If any element of the script fails, all running process trees are reliably cleaned up, and the block is tried again with an exponential backoff. You might think of this as exception handling for scripts. To learn more, please read the technical manual, or a more [philosophical paper](/assets/pdf/ethernet-hpdc12.pdf).
+If any element of the script fails, all running process trees are reliably cleaned up, and the block is tried again with an exponential backoff. You might think of this as exception handling for scripts. To learn more, please read the technical manual, or a more [philosophical paper](/assets/paper/pdf/ethernet-hpdc12.pdf).
 
 ## News Items
 
