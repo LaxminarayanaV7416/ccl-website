@@ -6,11 +6,10 @@ author: Cooperative Computing Lab
 image: /assets/blog/2026/taskvine-insights-how-to-propose-a-pull-request-to-the-ccl-team/TaskVine-Insights.png
 categories:
   - technical-articles
+  - taskvine-insights
 tags:
   - taskvine
   - cctools
-  - contribution
-  - github
 description: Contributions help TaskVine and CCTools move forward. This post welcomes discussion, pull requests, and patches, then describes the workflow from issue to merge and how to build, test, and submit against the official repository.
 toc: false
 related_posts: false
