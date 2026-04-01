@@ -40,11 +40,6 @@ Makeflow is powerful. Makeflow can handle workloads of millions of jobs running 
 
 <div class="row mt-3">
     <div class="col-sm-12">
-    	 <a href=https://docs.google.com/presentation/d/1E_EhV8GUEaip19SSOS1y0hbN-UuWpsWycnIvBcHfygE/edit>
-	 {% include figure.liquid path="assets/img/software/makeflow-tutoral.png" class="img-fluid rounded z-depth-0" zoomable=true %}
-	 </a>
-    </div>
-    <div class="col-sm-12">
-        {% include video.liquid path="https://www.youtube.com/playlist?list=PLVMZCBgSAPmsfZU1WVmZWCfOpAAD4tRAP" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://www.youtube.com/watch?v=Ogpu4L-nDJE&list=PLVMZCBgSAPmsfZU1WVmZWCfOpAAD4tRAP&index=1" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
