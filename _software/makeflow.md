@@ -15,7 +15,7 @@ links:
   - name: User Manual
     url: https://cctools.readthedocs.io/en/stable/makeflow/
   - name: Tutorial Slides
-    url: /assets/pdf/intro-makeflow-workqueue.pdf
+    url: https://docs.google.com/presentation/d/1E_EhV8GUEaip19SSOS1y0hbN-UuWpsWycnIvBcHfygE/edit?slide=id.p1
   - name: Example Repository
     url: https://github.com/cooperative-computing-lab/makeflow-examples
 ---
@@ -36,10 +36,15 @@ Makeflow is portable. A workflow is written in a technology neutral way, and the
 
 Makeflow is powerful. Makeflow can handle workloads of millions of jobs running on thousands of machines for months at a time. Makeflow is highly fault tolerant: it can crash or be killed, and upon resuming, will reconnect to running jobs and continue where it left off. A variety of analysis tools are available to understand the performance of your jobs, measure the progress of a workflow, and visualize what is going on.
 
-## Video Introduction to Workflows
+## Slides and Video
 
 <div class="row mt-3">
     <div class="col-sm-12">
-        {% include video.liquid path="https://www.youtube.com/embed/Ogpu4L-nDJE" class="img-fluid rounded z-depth-1" %}
+    	 <a href=https://docs.google.com/presentation/d/1E_EhV8GUEaip19SSOS1y0hbN-UuWpsWycnIvBcHfygE/edit>
+	 {% include figure.liquid path="assets/img/software/makeflow-tutoral.png" class="img-fluid rounded z-depth-0" zoomable=true %}
+	 </a>
+    </div>
+    <div class="col-sm-12">
+        {% include video.liquid path="https://www.youtube.com/playlist?list=PLVMZCBgSAPmsfZU1WVmZWCfOpAAD4tRAP" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
